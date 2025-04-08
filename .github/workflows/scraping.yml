@@ -21,8 +21,8 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install gspread oauth2client requests beautifulsoup4 gspread_dataframe jupyter
+          pip install gspread oauth2client requests beautifulsoup4 gspread_dataframe jupyter papermill
 
-      - name: Run the scraper script
+      - name: Run the scraper notebook
         run: |
-          jupyter nbconvert --to python --execute fsbo_lead_scraper.ipynb
+          papermill fsbo_lead_scraper.ipynb output_notebook.ipynb
