@@ -24,7 +24,8 @@ jobs:
           pip install gspread oauth2client requests beautifulsoup4 gspread_dataframe jupyter papermill
 
       - name: Write credentials.json from secret
-        run: echo "${{ secrets.GOOGLE_CREDENTIALS_JSON }}" > credentials.json
+        run: |
+          echo "${{ secrets.GOOGLE_CREDENTIALS_JSON }}" > credentials.json
 
       - name: Run the FSBO scraper
         run: python fsbo_scraper.py
