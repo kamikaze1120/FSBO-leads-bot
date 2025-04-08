@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install gspread oauth2client requests beautifulsoup4 gspread_dataframe
+          pip install gspread oauth2client requests beautifulsoup4 gspread_dataframe jupyter
 
       - name: Run the scraper script
         run: |
