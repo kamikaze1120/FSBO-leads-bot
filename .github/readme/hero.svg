@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">FSBO Leads Bot</title>
+  <desc id="desc">Animated night-sky banner: a for-sale-by-owner house, a daily clock, and rows landing in a Google Sheet.</desc>
+  <defs>
+    <linearGradient id="night" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#020317"/><stop offset=".52" stop-color="#071238"/><stop offset="1" stop-color="#13052d"/>
+    </linearGradient>
+    <radialGradient id="purpleCloud">
+      <stop stop-color="#d43cff" stop-opacity=".66"/><stop offset=".34" stop-color="#8d22ff" stop-opacity=".3"/><stop offset="1" stop-color="#4215a7" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="goldCloud">
+      <stop stop-color="#ffe69b" stop-opacity=".5"/><stop offset=".3" stop-color="#f0ad38" stop-opacity=".2"/><stop offset="1" stop-color="#b76f08" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="accentCloud">
+      <stop stop-color="#3ddc97" stop-opacity=".42"/><stop offset=".4" stop-color="#159a66" stop-opacity=".16"/><stop offset="1" stop-color="#159a66" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#a96b18"/><stop offset=".28" stop-color="#ffe293"/><stop offset=".55" stop-color="#f4bb4d"/><stop offset=".82" stop-color="#fff0b7"/><stop offset="1" stop-color="#b87519"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#ffffff" stop-opacity=".14"/><stop offset=".45" stop-color="#af75ff" stop-opacity=".08"/><stop offset="1" stop-color="#f6c35b" stop-opacity=".06"/>
+    </linearGradient>
+    <pattern id="stars" width="150" height="110" patternUnits="userSpaceOnUse">
+      <circle cx="13" cy="18" r="1.2" fill="#fff7d4" opacity=".9"/>
+      <circle cx="61" cy="36" r=".7" fill="#d7b5ff" opacity=".76"/>
+      <circle cx="112" cy="17" r=".9" fill="#fff" opacity=".72"/>
+      <circle cx="140" cy="68" r="1.1" fill="#ffd972" opacity=".8"/>
+      <circle cx="83" cy="91" r=".55" fill="#fff" opacity=".58"/>
+      <circle cx="31" cy="100" r=".75" fill="#c68cff" opacity=".78"/>
+    </pattern>
+    <filter id="blur" x="-70%" y="-70%" width="240%" height="240%"><feGaussianBlur stdDeviation="42"/></filter>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dy="18" stdDeviation="20" flood-color="#000017" flood-opacity=".8"/></filter>
+    <clipPath id="clip"><rect width="1200" height="420" rx="30"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#clip)">
+    <rect width="1200" height="420" fill="url(#night)"/>
+    <ellipse cx="270" cy="130" rx="340" ry="210" fill="url(#purpleCloud)" filter="url(#blur)">
+      <animate attributeName="rx" values="310;380;310" dur="14s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values=".65;1;.65" dur="9s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="1000" cy="270" rx="300" ry="190" fill="url(#goldCloud)" filter="url(#blur)">
+      <animate attributeName="ry" values="170;225;170" dur="16s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="960" cy="150" rx="220" ry="150" fill="url(#accentCloud)" filter="url(#blur)">
+      <animate attributeName="opacity" values=".5;1;.5" dur="11s" repeatCount="indefinite"/>
+    </ellipse>
+    <rect x="-150" width="1500" height="520" fill="url(#stars)" opacity=".78">
+      <animateTransform attributeName="transform" type="translate" values="0 0;150 0" dur="46s" repeatCount="indefinite"/>
+    </rect>
+
+    <g transform="translate(760 18)">
+      <path d="M20 120 L95 58 L170 120" fill="none" stroke="url(#gold)" stroke-width="3" stroke-linejoin="round"/>
+      <rect x="36" y="116" width="118" height="84" fill="#0a0f2e" stroke="url(#gold)" stroke-width="2"/>
+      <rect x="54" y="136" width="26" height="22" fill="#ffe293" opacity=".7"><animate attributeName="opacity" values=".25;.85;.25" dur="5s" repeatCount="indefinite"/></rect>
+      <rect x="108" y="146" width="28" height="54" fill="#160f38" stroke="#CB55FF" stroke-opacity=".7"/>
+      <rect x="140" y="70" width="14" height="30" fill="#0a0f2e" stroke="url(#gold)" stroke-width="1.5"/>
+      <line x1="196" y1="200" x2="196" y2="132" stroke="#f4c65a" stroke-width="3"/>
+      <g transform="translate(196 136)">
+        <animateTransform attributeName="transform" type="rotate" values="-4;4;-4" dur="5s" additive="sum" repeatCount="indefinite"/>
+        <rect x="-4" y="0" width="74" height="40" rx="5" fill="#3ddc97" fill-opacity=".16" stroke="#3ddc97" stroke-width="1.6"/>
+        <text x="33" y="17" text-anchor="middle" fill="#c9ffe6" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="10" font-weight="700" letter-spacing="1">FOR SALE</text>
+        <text x="33" y="31" text-anchor="middle" fill="#c9ffe6" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="9" letter-spacing="1">BY OWNER</text>
+      </g>
+    </g>
+    <g transform="translate(1100 110)">
+      <circle r="44" fill="#0a0f2e" stroke="url(#gold)" stroke-width="2"/>
+      <circle r="58" fill="none" stroke="#bc52ff" stroke-width="1" stroke-dasharray="2 10" opacity=".55">
+        <animateTransform attributeName="transform" type="rotate" values="0;360" dur="30s" repeatCount="indefinite"/>
+      </circle>
+      <line x1="0" y1="0" x2="0" y2="-30" stroke="#ffe293" stroke-width="3" stroke-linecap="round">
+        <animateTransform attributeName="transform" type="rotate" values="0;360" dur="12s" repeatCount="indefinite"/>
+      </line>
+      <line x1="0" y1="0" x2="20" y2="0" stroke="#f4bb4d" stroke-width="3" stroke-linecap="round"/>
+      <circle r="4" fill="#3ddc97" filter="url(#glow)"/>
+      <text y="72" text-anchor="middle" fill="#9fe8c6" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="11" letter-spacing="2">00:00 UTC</text>
+    </g>
+    <g transform="translate(824 232)">
+      <rect width="260" height="128" rx="12" fill="#071331" fill-opacity=".85" stroke="#3ddc97" stroke-opacity=".55"/>
+      <rect width="260" height="24" rx="12" fill="#3ddc97" fill-opacity=".14"/>
+      <text x="14" y="16" fill="#c9ffe6" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="10" letter-spacing="2">SHEET / FSBO Leads</text>
+      <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.10;0.20;.92;1" dur="8s" repeatCount="indefinite"/><rect x="8" y="224" width="244" height="18" rx="3" fill="#3ddc97" fill-opacity=".08"/><rect x="16" y="229" width="70" height="7" rx="3.5" fill="#d9c7f2" opacity=".45"/><rect x="96" y="229" width="44" height="7" rx="3.5" fill="#d9c7f2" opacity=".3"/><rect x="150" y="229" width="30" height="7" rx="3.5" fill="#d9c7f2" opacity=".3"/><rect x="190" y="229" width="52" height="7" rx="3.5" fill="#3ddc97" opacity=".55"/></g>
+      <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.25;0.35;.92;1" dur="8s" repeatCount="indefinite"/><rect x="8" y="248" width="244" height="18" rx="3" fill="#3ddc97" fill-opacity=".08"/><rect x="16" y="253" width="70" height="7" rx="3.5" fill="#d9c7f2" opacity=".45"/><rect x="96" y="253" width="44" height="7" rx="3.5" fill="#d9c7f2" opacity=".3"/><rect x="150" y="253" width="30" height="7" rx="3.5" fill="#d9c7f2" opacity=".3"/><rect x="190" y="253" width="52" height="7" rx="3.5" fill="#3ddc97" opacity=".55"/></g>
+      <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.40;0.50;.92;1" dur="8s" repeatCount="indefinite"/><rect x="8" y="272" width="244" height="18" rx="3" fill="#3ddc97" fill-opacity=".08"/><rect x="16" y="277" width="70" height="7" rx="3.5" fill="#d9c7f2" opacity=".45"/><rect x="96" y="277" width="44" height="7" rx="3.5" fill="#d9c7f2" opacity=".3"/><rect x="150" y="277" width="30" height="7" rx="3.5" fill="#d9c7f2" opacity=".3"/><rect x="190" y="277" width="52" height="7" rx="3.5" fill="#3ddc97" opacity=".55"/></g>
+      <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.55;0.65;.92;1" dur="8s" repeatCount="indefinite"/><rect x="8" y="296" width="244" height="18" rx="3" fill="#3ddc97" fill-opacity=".08"/><rect x="16" y="301" width="70" height="7" rx="3.5" fill="#d9c7f2" opacity=".45"/><rect x="96" y="301" width="44" height="7" rx="3.5" fill="#d9c7f2" opacity=".3"/><rect x="150" y="301" width="30" height="7" rx="3.5" fill="#d9c7f2" opacity=".3"/><rect x="190" y="301" width="52" height="7" rx="3.5" fill="#3ddc97" opacity=".55"/></g>
+    </g>
+    <path d="M1100 190 C1100 214 1096 226 1086 240" fill="none" stroke="#3ddc97" stroke-width="1.4" stroke-dasharray="3 7" opacity=".7">
+      <animate attributeName="stroke-dashoffset" values="20;0" dur="1.6s" repeatCount="indefinite"/>
+    </path>
+
+
+    <g filter="url(#shadow)">
+      <rect x="60" y="52" width="660" height="316" rx="28" fill="#060a25" fill-opacity=".58" stroke="url(#gold)" stroke-opacity=".8"/>
+      <rect x="72" y="64" width="636" height="292" rx="22" fill="url(#glass)" stroke="#d38cff" stroke-opacity=".26"/>
+    </g>
+    <path d="M102 100H300" stroke="url(#gold)" stroke-width="2"/>
+    <circle cx="102" cy="100" r="5" fill="#ffd66f" filter="url(#glow)">
+      <animate attributeName="opacity" values=".3;1;.3" dur="1.6s" repeatCount="indefinite"/>
+    </circle>
+    <text x="120" y="105" fill="#f9d777" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="13" letter-spacing="3">GITHUB ACTIONS / GOOGLE SHEETS</text>
+    <text x="102" y="190" fill="url(#gold)" font-family="'Segoe UI', 'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="58" font-weight="800" letter-spacing="3">FSBO LEADS BOT</text>
+    <text x="104" y="236" fill="#d9c7f2" font-family="'Segoe UI', 'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="18">A scheduled pipeline that writes FSBO lead rows to a sheet.</text>
+    <g transform="translate(104 266)"><rect width="146" height="40" rx="20" fill="#160f38" fill-opacity=".8" stroke="#d34cff" stroke-opacity=".7"/><circle cx="22" cy="20" r="5" fill="#3ddc97" filter="url(#glow)"><animate attributeName="opacity" values=".3;1;.3" dur="1.4s" repeatCount="indefinite"/></circle><text x="38" y="25" fill="#f0e2ff" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="12" letter-spacing="1.3">DAILY CRON</text></g>
+    <g transform="translate(264 266)"><rect width="94" height="40" rx="20" fill="#1d1732" fill-opacity=".8" stroke="#f3c454" stroke-opacity=".7"/><text x="22" y="25" fill="#f0e2ff" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="12" letter-spacing="1.3">PYTHON</text></g>
+    <g transform="translate(372 266)"><rect width="136" height="40" rx="20" fill="#111331" fill-opacity=".8" stroke="#3ddc97" stroke-opacity=".7"/><text x="22" y="25" fill="#f0e2ff" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="12" letter-spacing="1.3">EARLY STAGE</text></g>
+    
+    <rect x="0" y="0" width="1200" height="420" rx="30" fill="none" stroke="url(#gold)" stroke-width="2"/>
+    <rect x="10" y="10" width="1180" height="400" rx="23" fill="none" stroke="#c44fff" stroke-opacity=".16"/>
+    <rect x="0" y="-45" width="1200" height="34" fill="#f7cf68" opacity=".045"><animate attributeName="y" values="-45;450" dur="8s" repeatCount="indefinite"/></rect>
+  </g>
+</svg>
